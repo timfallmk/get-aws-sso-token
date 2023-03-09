@@ -1,0 +1,1208 @@
+(aws.Config) {
+ Region: (string) (len=13) "us-gov-west-1",
+ Credentials: (*aws.CredentialsCache)(0x140000a4b00)({
+  provider: (*ssocreds.Provider)(0x1400011b0a0)({
+   options: (ssocreds.Options) {
+    Client: (*sso.Client)(0x140000e7900)({
+     options: (sso.Options) {
+      APIOptions: ([]func(*middleware.Stack) error) {
+      },
+      ClientLogMode: (aws.ClientLogMode) 0,
+      Credentials: (aws.AnonymousCredentials) {
+      },
+      DefaultsMode: (aws.DefaultsMode) (len=6) "legacy",
+      EndpointOptions: (endpoints.Options) {
+       Logger: (logging.Logger) <nil>,
+       LogDeprecated: (bool) false,
+       ResolvedRegion: (string) "",
+       DisableHTTPS: (bool) false,
+       UseDualStackEndpoint: (aws.DualStackEndpointState) 0,
+       UseFIPSEndpoint: (aws.FIPSEndpointState) 0
+      },
+      EndpointResolver: (*endpoints.Resolver)(0x140000b4258)({
+       partitions: (endpoints.Partitions) (len=5 cap=5) {
+        (endpoints.Partition) {
+         ID: (string) (len=3) "aws",
+         RegionRegex: (*regexp.Regexp)(0x140000b6aa0)(^(us|eu|ap|sa|ca|me|af)\-\w+\-\d+$),
+         PartitionEndpoint: (string) "",
+         IsRegionalized: (bool) true,
+         Defaults: (map[endpoints.DefaultKey]endpoints.Endpoint) (len=4) {
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 4611686018427387904,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=27) "portal.sso.{region}.api.aws",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 9223372036854775808,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=38) "portal.sso-fips.{region}.amazonaws.com",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 13835058055282163712,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=32) "portal.sso-fips.{region}.api.aws",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=33) "portal.sso.{region}.amazonaws.com",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          }
+         },
+         Endpoints: (endpoints.Endpoints) (len=22) {
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "ap-east-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.ap-east-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "ap-east-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=14) "ap-northeast-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=39) "portal.sso.ap-northeast-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=14) "ap-northeast-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=10) "ap-south-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=35) "portal.sso.ap-south-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=10) "ap-south-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=14) "ap-southeast-3",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=39) "portal.sso.ap-southeast-3.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=14) "ap-southeast-3",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "eu-west-3",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.eu-west-3.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "eu-west-3",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "us-east-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.us-east-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "us-east-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "us-west-2",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.us-west-2.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "us-west-2",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=14) "ap-northeast-3",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=39) "portal.sso.ap-northeast-3.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=14) "ap-northeast-3",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=10) "eu-north-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=35) "portal.sso.eu-north-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=10) "eu-north-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=10) "eu-south-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=35) "portal.sso.eu-south-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=10) "eu-south-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "us-west-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.us-west-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "us-west-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=10) "af-south-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=35) "portal.sso.af-south-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=10) "af-south-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=14) "ap-northeast-2",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=39) "portal.sso.ap-northeast-2.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=14) "ap-northeast-2",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=14) "ap-southeast-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=39) "portal.sso.ap-southeast-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=14) "ap-southeast-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=12) "ca-central-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=37) "portal.sso.ca-central-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=12) "ca-central-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "sa-east-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.sa-east-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "sa-east-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=14) "ap-southeast-2",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=39) "portal.sso.ap-southeast-2.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=14) "ap-southeast-2",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=12) "eu-central-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=37) "portal.sso.eu-central-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=12) "eu-central-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "eu-west-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.eu-west-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "eu-west-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "eu-west-2",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.eu-west-2.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "eu-west-2",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=10) "me-south-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=35) "portal.sso.me-south-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=10) "me-south-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=9) "us-east-2",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=34) "portal.sso.us-east-2.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=9) "us-east-2",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          }
+         }
+        },
+        (endpoints.Partition) {
+         ID: (string) (len=6) "aws-cn",
+         RegionRegex: (*regexp.Regexp)(0x140000b6be0)(^cn\-\w+\-\d+$),
+         PartitionEndpoint: (string) "",
+         IsRegionalized: (bool) true,
+         Defaults: (map[endpoints.DefaultKey]endpoints.Endpoint) (len=4) {
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 4611686018427387904,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=48) "portal.sso.{region}.api.amazonwebservices.com.cn",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 9223372036854775808,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=41) "portal.sso-fips.{region}.amazonaws.com.cn",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 13835058055282163712,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=53) "portal.sso-fips.{region}.api.amazonwebservices.com.cn",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=36) "portal.sso.{region}.amazonaws.com.cn",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          }
+         },
+         Endpoints: (endpoints.Endpoints) <nil>
+        },
+        (endpoints.Partition) {
+         ID: (string) (len=7) "aws-iso",
+         RegionRegex: (*regexp.Regexp)(0x140000b6d20)(^us\-iso\-\w+\-\d+$),
+         PartitionEndpoint: (string) "",
+         IsRegionalized: (bool) true,
+         Defaults: (map[endpoints.DefaultKey]endpoints.Endpoint) (len=2) {
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 9223372036854775808,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=35) "portal.sso-fips.{region}.c2s.ic.gov",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=30) "portal.sso.{region}.c2s.ic.gov",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          }
+         },
+         Endpoints: (endpoints.Endpoints) <nil>
+        },
+        (endpoints.Partition) {
+         ID: (string) (len=9) "aws-iso-b",
+         RegionRegex: (*regexp.Regexp)(0x140000b6e60)(^us\-isob\-\w+\-\d+$),
+         PartitionEndpoint: (string) "",
+         IsRegionalized: (bool) true,
+         Defaults: (map[endpoints.DefaultKey]endpoints.Endpoint) (len=2) {
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 9223372036854775808,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=38) "portal.sso-fips.{region}.sc2s.sgov.gov",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=33) "portal.sso.{region}.sc2s.sgov.gov",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          }
+         },
+         Endpoints: (endpoints.Endpoints) <nil>
+        },
+        (endpoints.Partition) {
+         ID: (string) (len=10) "aws-us-gov",
+         RegionRegex: (*regexp.Regexp)(0x140000b6fa0)(^us\-gov\-\w+\-\d+$),
+         PartitionEndpoint: (string) "",
+         IsRegionalized: (bool) true,
+         Defaults: (map[endpoints.DefaultKey]endpoints.Endpoint) (len=4) {
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=33) "portal.sso.{region}.amazonaws.com",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 4611686018427387904,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=27) "portal.sso.{region}.api.aws",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 9223372036854775808,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=38) "portal.sso-fips.{region}.amazonaws.com",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.DefaultKey) {
+           Variant: (endpoints.EndpointVariant) 13835058055282163712,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=32) "portal.sso-fips.{region}.api.aws",
+           Protocols: ([]string) (len=1 cap=1) {
+            (string) (len=5) "https"
+           },
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) "",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) (len=1 cap=1) {
+            (string) (len=2) "v4"
+           },
+           Deprecated: (aws.Ternary) unknown
+          }
+         },
+         Endpoints: (endpoints.Endpoints) (len=2) {
+          (endpoints.EndpointKey) {
+           Region: (string) (len=13) "us-gov-east-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=38) "portal.sso.us-gov-east-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=13) "us-gov-east-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          },
+          (endpoints.EndpointKey) {
+           Region: (string) (len=13) "us-gov-west-1",
+           Variant: (endpoints.EndpointVariant) 0,
+           ServiceVariant: (endpoints.ServiceVariant) 0
+          }: (endpoints.Endpoint) {
+           Unresolveable: (aws.Ternary) unknown,
+           Hostname: (string) (len=38) "portal.sso.us-gov-west-1.amazonaws.com",
+           Protocols: ([]string) <nil>,
+           CredentialScope: (endpoints.CredentialScope) {
+            Region: (string) (len=13) "us-gov-west-1",
+            Service: (string) ""
+           },
+           SignatureVersions: ([]string) <nil>,
+           Deprecated: (aws.Ternary) unknown
+          }
+         }
+        }
+       }
+      }),
+      HTTPSignerV4: (*v4.Signer)(0x140001524e0)({
+       options: (v4.SignerOptions) {
+        DisableHeaderHoisting: (bool) false,
+        DisableURIPathEscaping: (bool) false,
+        Logger: (*logging.StandardLogger)(0x140000a00f0)({
+         Logger: (*log.Logger)(0x140000c2640)({
+          mu: (sync.Mutex) {
+           state: (int32) 0,
+           sema: (uint32) 0
+          },
+          prefix: (string) (len=4) "SDK ",
+          flag: (int) 3,
+          out: (*os.File)(0x140000a0010)({
+           file: (*os.file)(0x140000a20c0)({
+            pfd: (poll.FD) {
+             fdmu: (poll.fdMutex) {
+              state: (uint64) 0,
+              rsema: (uint32) 0,
+              wsema: (uint32) 0
+             },
+             Sysfd: (int) 2,
+             pd: (poll.pollDesc) {
+              runtimeCtx: (uintptr) <nil>
+             },
+             iovecs: (*[]syscall.Iovec)(<nil>),
+             csema: (uint32) 0,
+             isBlocking: (uint32) 1,
+             IsStream: (bool) true,
+             ZeroReadIsEOF: (bool) true,
+             isFile: (bool) true
+            },
+            name: (string) (len=11) "/dev/stderr",
+            dirinfo: (*os.dirInfo)(<nil>),
+            nonblock: (bool) false,
+            stdoutOrErr: (bool) true,
+            appendMode: (bool) false
+           })
+          }),
+          buf: ([]uint8) <nil>,
+          isDiscard: (atomic.Bool) {
+           _: (atomic.noCopy) {
+           },
+           v: (uint32) 0
+          }
+         })
+        }),
+        LogSigning: (bool) false
+       },
+       keyDerivator: (*v4.SigningKeyDeriver)(0x140000c07a0)({
+        cache: (v4.derivedKeyCache) {
+         values: (map[string]v4.derivedKey) {
+         },
+         mutex: (sync.RWMutex) {
+          w: (sync.Mutex) {
+           state: (int32) 0,
+           sema: (uint32) 0
+          },
+          writerSem: (uint32) 0,
+          readerSem: (uint32) 0,
+          readerCount: (atomic.Int32) {
+           _: (atomic.noCopy) {
+           },
+           v: (int32) 0
+          },
+          readerWait: (atomic.Int32) {
+           _: (atomic.noCopy) {
+           },
+           v: (int32) 0
+          }
+         }
+        }
+       })
+      }),
+      Logger: (*logging.StandardLogger)(0x140000a00f0)({
+       Logger: (*log.Logger)(0x140000c2640)({
+        mu: (sync.Mutex) {
+         state: (int32) 0,
+         sema: (uint32) 0
+        },
+        prefix: (string) (len=4) "SDK ",
+        flag: (int) 3,
+        out: (*os.File)(0x140000a0010)({
+         file: (*os.file)(0x140000a20c0)({
+          pfd: (poll.FD) {
+           fdmu: (poll.fdMutex) {
+            state: (uint64) 0,
+            rsema: (uint32) 0,
+            wsema: (uint32) 0
+           },
+           Sysfd: (int) 2,
+           pd: (poll.pollDesc) {
+            runtimeCtx: (uintptr) <nil>
+           },
+           iovecs: (*[]syscall.Iovec)(<nil>),
+           csema: (uint32) 0,
+           isBlocking: (uint32) 1,
+           IsStream: (bool) true,
+           ZeroReadIsEOF: (bool) true,
+           isFile: (bool) true
+          },
+          name: (string) (len=11) "/dev/stderr",
+          dirinfo: (*os.dirInfo)(<nil>),
+          nonblock: (bool) false,
+          stdoutOrErr: (bool) true,
+          appendMode: (bool) false
+         })
+        }),
+        buf: ([]uint8) <nil>,
+        isDiscard: (atomic.Bool) {
+         _: (atomic.noCopy) {
+         },
+         v: (uint32) 0
+        }
+       })
+      }),
+      Region: (string) (len=13) "us-gov-west-1",
+      RetryMaxAttempts: (int) 0,
+      RetryMode: (aws.RetryMode) (len=8) standard,
+      Retryer: (*retry.Standard)(0x140000d5600)({
+       options: (retry.StandardOptions) {
+        MaxAttempts: (int) 3,
+        MaxBackoff: (time.Duration) 20s,
+        Backoff: (retry.BackoffDelayer) <nil>,
+        Retryables: ([]retry.IsErrorRetryable) (len=6 cap=6) {
+         (retry.NoRetryCanceledError) {
+         },
+         (retry.RetryableError) {
+         },
+         (retry.RetryableConnectionError) {
+         },
+         (retry.RetryableHTTPStatusCode) {
+          Codes: (map[int]struct {}) (len=4) {
+           (int) 503: (struct {}) {
+           },
+           (int) 504: (struct {}) {
+           },
+           (int) 500: (struct {}) {
+           },
+           (int) 502: (struct {}) {
+           }
+          }
+         },
+         (retry.RetryableErrorCode) {
+          Codes: (map[string]struct {}) (len=2) {
+           (string) (len=14) "RequestTimeout": (struct {}) {
+           },
+           (string) (len=23) "RequestTimeoutException": (struct {}) {
+           }
+          }
+         },
+         (retry.RetryableErrorCode) {
+          Codes: (map[string]struct {}) (len=14) {
+           (string) (len=10) "Throttling": (struct {}) {
+           },
+           (string) (len=18) "ThrottledException": (struct {}) {
+           },
+           (string) (len=30) "TransactionInProgressException": (struct {}) {
+           },
+           (string) (len=23) "PriorRequestNotComplete": (struct {}) {
+           },
+           (string) (len=8) "SlowDown": (struct {}) {
+           },
+           (string) (len=19) "ThrottlingException": (struct {}) {
+           },
+           (string) (len=25) "RequestThrottledException": (struct {}) {
+           },
+           (string) (len=24) "TooManyRequestsException": (struct {}) {
+           },
+           (string) (len=38) "ProvisionedThroughputExceededException": (struct {}) {
+           },
+           (string) (len=22) "BandwidthLimitExceeded": (struct {}) {
+           },
+           (string) (len=16) "RequestThrottled": (struct {}) {
+           },
+           (string) (len=20) "RequestLimitExceeded": (struct {}) {
+           },
+           (string) (len=22) "LimitExceededException": (struct {}) {
+           },
+           (string) (len=21) "EC2ThrottledException": (struct {}) {
+           }
+          }
+         }
+        },
+        Timeouts: ([]retry.IsErrorTimeout) (len=1 cap=1) {
+         (retry.TimeouterError) {
+         }
+        },
+        RateLimiter: (*ratelimit.TokenRateLimit)(0x140000a00f8)({
+         bucket: (*ratelimit.TokenBucket)(0x140000f4b40)({
+          remainingTokens: (uint) 500,
+          maxCapacity: (uint) 500,
+          minCapacity: (uint) 1,
+          mu: (sync.Mutex) {
+           state: (int32) 0,
+           sema: (uint32) 0
+          }
+         })
+        }),
+        RetryCost: (uint) 5,
+        RetryTimeoutCost: (uint) 10,
+        NoRetryIncrement: (uint) 1
+       },
+       timeout: (retry.IsErrorTimeouts) (len=1 cap=1) {
+        (retry.TimeouterError) {
+        }
+       },
+       retryable: (retry.IsErrorRetryables) (len=6 cap=6) {
+        (retry.NoRetryCanceledError) {
+        },
+        (retry.RetryableError) {
+        },
+        (retry.RetryableConnectionError) {
+        },
+        (retry.RetryableHTTPStatusCode) {
+         Codes: (map[int]struct {}) (len=4) {
+          (int) 500: (struct {}) {
+          },
+          (int) 502: (struct {}) {
+          },
+          (int) 503: (struct {}) {
+          },
+          (int) 504: (struct {}) {
+          }
+         }
+        },
+        (retry.RetryableErrorCode) {
+         Codes: (map[string]struct {}) (len=2) {
+          (string) (len=14) "RequestTimeout": (struct {}) {
+          },
+          (string) (len=23) "RequestTimeoutException": (struct {}) {
+          }
+         }
+        },
+        (retry.RetryableErrorCode) {
+         Codes: (map[string]struct {}) (len=14) {
+          (string) (len=16) "RequestThrottled": (struct {}) {
+          },
+          (string) (len=19) "ThrottlingException": (struct {}) {
+          },
+          (string) (len=25) "RequestThrottledException": (struct {}) {
+          },
+          (string) (len=24) "TooManyRequestsException": (struct {}) {
+          },
+          (string) (len=38) "ProvisionedThroughputExceededException": (struct {}) {
+          },
+          (string) (len=22) "BandwidthLimitExceeded": (struct {}) {
+          },
+          (string) (len=20) "RequestLimitExceeded": (struct {}) {
+          },
+          (string) (len=22) "LimitExceededException": (struct {}) {
+          },
+          (string) (len=21) "EC2ThrottledException": (struct {}) {
+          },
+          (string) (len=10) "Throttling": (struct {}) {
+          },
+          (string) (len=18) "ThrottledException": (struct {}) {
+          },
+          (string) (len=30) "TransactionInProgressException": (struct {}) {
+          },
+          (string) (len=23) "PriorRequestNotComplete": (struct {}) {
+          },
+          (string) (len=8) "SlowDown": (struct {}) {
+          }
+         }
+        }
+       },
+       backoff: (*retry.ExponentialJitterBackoff)(0x140000b4210)({
+        maxBackoff: (time.Duration) 20s,
+        maxBackoffAttempts: (float64) 4.321928094887363,
+        randFloat64: (func() (float64, error)) 0x102d32810
+       })
+      }),
+      RuntimeEnvironment: (aws.RuntimeEnvironment) {
+       EnvironmentIdentifier: (aws.ExecutionEnvironmentID) "",
+       Region: (string) "",
+       EC2InstanceMetadataRegion: (string) ""
+      },
+      resolvedDefaultsMode: (aws.DefaultsMode) (len=6) "legacy",
+      HTTPClient: (*http.BuildableClient)(0x14000152480)({
+       transport: (*http.Transport)(<nil>),
+       dialer: (*net.Dialer)(<nil>),
+       initOnce: (sync.Once) {
+        done: (uint32) 0,
+        m: (sync.Mutex) {
+         state: (int32) 0,
+         sema: (uint32) 0
+        }
+       },
+       clientTimeout: (time.Duration) 0s,
+       client: (*http.Client)(<nil>)
+      })
+     }
+    }),
+    AccountID: (string) (len=12) "374598629629",
+    RoleName: (string) (len=19) "AdministratorAccess",
+    StartURL: (string) (len=53) "https://start.us-gov-home.awsapps.com/directory/astra",
+    CachedTokenFilepath: (string) "",
+    SSOTokenProvider: (*ssocreds.SSOTokenProvider)(<nil>)
+   },
+   cachedTokenFilepath: (string) ""
+  }),
+  options: (aws.CredentialsCacheOptions) {
+   ExpiryWindow: (time.Duration) 0s,
+   ExpiryWindowJitterFrac: (float64) 0
+  },
+  creds: (atomic.Value) {
+   v: (interface {}) <nil>
+  },
+  sf: (singleflight.Group) {
+   mu: (sync.Mutex) {
+    state: (int32) 0,
+    sema: (uint32) 0
+   },
+   m: (map[string]*singleflight.call) <nil>
+  }
+ }),
+ BearerAuthTokenProvider: (bearer.TokenProvider) <nil>,
+ HTTPClient: (aws.HTTPClient) <nil>,
+ EndpointResolver: (aws.EndpointResolver) <nil>,
+ EndpointResolverWithOptions: (aws.EndpointResolverWithOptions) <nil>,
+ RetryMaxAttempts: (int) 0,
+ RetryMode: (aws.RetryMode) ,
+ Retryer: (func() aws.Retryer) <nil>,
+ ConfigSources: ([]interface {}) (len=3 cap=4) {
+  (config.LoadOptions) {
+   Region: (string) "",
+   Credentials: (aws.CredentialsProvider) <nil>,
+   BearerAuthTokenProvider: (bearer.TokenProvider) <nil>,
+   HTTPClient: (config.HTTPClient) <nil>,
+   EndpointResolver: (aws.EndpointResolver) <nil>,
+   EndpointResolverWithOptions: (aws.EndpointResolverWithOptions) <nil>,
+   RetryMaxAttempts: (int) 0,
+   RetryMode: (aws.RetryMode) ,
+   Retryer: (func() aws.Retryer) <nil>,
+   APIOptions: ([]func(*middleware.Stack) error) <nil>,
+   Logger: (logging.Logger) <nil>,
+   ClientLogMode: (*aws.ClientLogMode)(<nil>),
+   SharedConfigProfile: (string) (len=7) "iac-dev",
+   SharedConfigFiles: ([]string) <nil>,
+   SharedCredentialsFiles: ([]string) <nil>,
+   CustomCABundle: (io.Reader) <nil>,
+   DefaultRegion: (string) "",
+   UseEC2IMDSRegion: (*config.UseEC2IMDSRegion)(<nil>),
+   CredentialsCacheOptions: (func(*aws.CredentialsCacheOptions)) <nil>,
+   BearerAuthTokenCacheOptions: (func(*bearer.TokenCacheOptions)) <nil>,
+   SSOTokenProviderOptions: (func(*ssocreds.SSOTokenProviderOptions)) <nil>,
+   ProcessCredentialOptions: (func(*processcreds.Options)) <nil>,
+   EC2RoleCredentialOptions: (func(*ec2rolecreds.Options)) <nil>,
+   EndpointCredentialOptions: (func(*endpointcreds.Options)) <nil>,
+   WebIdentityRoleCredentialOptions: (func(*stscreds.WebIdentityRoleOptions)) <nil>,
+   AssumeRoleCredentialOptions: (func(*stscreds.AssumeRoleOptions)) <nil>,
+   SSOProviderOptions: (func(*ssocreds.Options)) <nil>,
+   LogConfigurationWarnings: (*bool)(<nil>),
+   S3UseARNRegion: (*bool)(<nil>),
+   EnableEndpointDiscovery: (aws.EndpointDiscoveryEnableState) 0,
+   EC2IMDSClientEnableState: (config.ClientEnableState) 0,
+   EC2IMDSEndpointMode: (config.EndpointModeState) 0,
+   EC2IMDSEndpoint: (string) "",
+   UseDualStackEndpoint: (aws.DualStackEndpointState) 0,
+   UseFIPSEndpoint: (aws.FIPSEndpointState) 0,
+   DefaultsModeOptions: (config.DefaultsModeOptions) {
+    Mode: (aws.DefaultsMode) "",
+    IMDSClient: (*imds.Client)(<nil>)
+   }
+  },
+  (config.EnvConfig) {
+   Credentials: (aws.Credentials) {
+    AccessKeyID: (string) "",
+    SecretAccessKey: (string) "",
+    SessionToken: (string) "",
+    Source: (string) "",
+    CanExpire: (bool) false,
+    Expires: (time.Time) 0001-01-01 00:00:00 +0000 UTC
+   },
+   ContainerCredentialsEndpoint: (string) "",
+   ContainerCredentialsRelativePath: (string) "",
+   ContainerAuthorizationToken: (string) "",
+   Region: (string) "",
+   SharedConfigProfile: (string) "",
+   SharedCredentialsFile: (string) "",
+   SharedConfigFile: (string) "",
+   CustomCABundle: (string) "",
+   EnableEndpointDiscovery: (aws.EndpointDiscoveryEnableState) 0,
+   WebIdentityTokenFilePath: (string) "",
+   RoleARN: (string) "",
+   RoleSessionName: (string) "",
+   S3UseARNRegion: (*bool)(<nil>),
+   EC2IMDSClientEnableState: (config.ClientEnableState) 0,
+   EC2IMDSEndpointMode: (config.EndpointModeState) 0,
+   EC2IMDSEndpoint: (string) "",
+   S3DisableMultiRegionAccessPoints: (*bool)(<nil>),
+   UseDualStackEndpoint: (aws.DualStackEndpointState) 0,
+   UseFIPSEndpoint: (aws.FIPSEndpointState) 0,
+   DefaultsMode: (aws.DefaultsMode) "",
+   RetryMaxAttempts: (int) 0,
+   RetryMode: (aws.RetryMode) 
+  },
+  (config.SharedConfig) {
+   Profile: (string) (len=7) "iac-dev",
+   Credentials: (aws.Credentials) {
+    AccessKeyID: (string) "",
+    SecretAccessKey: (string) "",
+    SessionToken: (string) "",
+    Source: (string) "",
+    CanExpire: (bool) false,
+    Expires: (time.Time) 0001-01-01 00:00:00 +0000 UTC
+   },
+   CredentialSource: (string) "",
+   CredentialProcess: (string) "",
+   WebIdentityTokenFile: (string) "",
+   SSOSessionName: (string) "",
+   SSOSession: (*config.SSOSession)(<nil>),
+   SSORegion: (string) (len=13) "us-gov-west-1",
+   SSOStartURL: (string) (len=53) "https://start.us-gov-home.awsapps.com/directory/astra",
+   SSOAccountID: (string) (len=12) "374598629629",
+   SSORoleName: (string) (len=19) "AdministratorAccess",
+   RoleARN: (string) "",
+   ExternalID: (string) "",
+   MFASerial: (string) "",
+   RoleSessionName: (string) "",
+   RoleDurationSeconds: (*time.Duration)(<nil>),
+   SourceProfileName: (string) "",
+   Source: (*config.SharedConfig)(<nil>),
+   Region: (string) (len=13) "us-gov-west-1",
+   EnableEndpointDiscovery: (aws.EndpointDiscoveryEnableState) 0,
+   S3UseARNRegion: (*bool)(<nil>),
+   EC2IMDSEndpointMode: (config.EndpointModeState) 0,
+   EC2IMDSEndpoint: (string) "",
+   S3DisableMultiRegionAccessPoints: (*bool)(<nil>),
+   UseDualStackEndpoint: (aws.DualStackEndpointState) 0,
+   UseFIPSEndpoint: (aws.FIPSEndpointState) 0,
+   DefaultsMode: (aws.DefaultsMode) "",
+   RetryMaxAttempts: (int) 0,
+   RetryMode: (aws.RetryMode) ,
+   CustomCABundle: (string) ""
+  }
+ },
+ APIOptions: ([]func(*middleware.Stack) error) <nil>,
+ Logger: (*logging.StandardLogger)(0x140000a00f0)({
+  Logger: (*log.Logger)(0x140000c2640)({
+   mu: (sync.Mutex) {
+    state: (int32) 0,
+    sema: (uint32) 0
+   },
+   prefix: (string) (len=4) "SDK ",
+   flag: (int) 3,
+   out: (*os.File)(0x140000a0010)({
+    file: (*os.file)(0x140000a20c0)({
+     pfd: (poll.FD) {
+      fdmu: (poll.fdMutex) {
+       state: (uint64) 0,
+       rsema: (uint32) 0,
+       wsema: (uint32) 0
+      },
+      Sysfd: (int) 2,
+      pd: (poll.pollDesc) {
+       runtimeCtx: (uintptr) <nil>
+      },
+      iovecs: (*[]syscall.Iovec)(<nil>),
+      csema: (uint32) 0,
+      isBlocking: (uint32) 1,
+      IsStream: (bool) true,
+      ZeroReadIsEOF: (bool) true,
+      isFile: (bool) true
+     },
+     name: (string) (len=11) "/dev/stderr",
+     dirinfo: (*os.dirInfo)(<nil>),
+     nonblock: (bool) false,
+     stdoutOrErr: (bool) true,
+     appendMode: (bool) false
+    })
+   }),
+   buf: ([]uint8) <nil>,
+   isDiscard: (atomic.Bool) {
+    _: (atomic.noCopy) {
+    },
+    v: (uint32) 0
+   }
+  })
+ }),
+ ClientLogMode: (aws.ClientLogMode) 0,
+ DefaultsMode: (aws.DefaultsMode) (len=6) "legacy",
+ RuntimeEnvironment: (aws.RuntimeEnvironment) {
+  EnvironmentIdentifier: (aws.ExecutionEnvironmentID) "",
+  Region: (string) "",
+  EC2InstanceMetadataRegion: (string) ""
+ }
+}
